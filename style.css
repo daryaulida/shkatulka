@@ -54,11 +54,11 @@ a:hover {
     color: var(--color-accent-hover);
 }
 
-img {
+/* img {
     max-width: 100%;
     height: auto;
     display: block;
-}
+} */
 
 button {
     font-family: inherit;
@@ -227,120 +227,76 @@ h2,
 } */
 
 
-/* ===== HEADER WRAP ===== */
-.ss_header {
-  width: 100%;
-  background: #fff;
-  
-}
 
-/* ✅ ОДИН container */
-.ss_header_container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  height: 120px;
-}
-
-/* ===== LEFT ===== */
-.ss_header_left {
-  display: flex;
-  gap: 16px;
-}
-
-.ss_header_left a {
-  font-size: 16px;
-  color: #555;
-  text-decoration: none;
-}
-
-.ss_header_left a:hover {
-  color: #6f6bb1;
-}
-
-/* ===== CENTER ===== */
-.ss_header_center {
-  display: flex;
-  justify-content: center;
-}
-
-.ss_header_center img {
+.top-header {
+  max-width: 1168px;
   height: 85px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT */
+.top-header__left {
+  display: flex;
+  gap: 24px;
+}
+
+.top-header__left a {
+  font-size: 14px;
+  color: #8f8f8f;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+/* CENTER */
+.top-header__center img {
+  height: 56px;
   display: block;
 }
 
-/* ===== RIGHT ===== */
-.ss_header_right {
+/* RIGHT */
+.top-header__right {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
-/* SOCIAL */
-.ss_header_social {
-  display: flex;
-  gap: 14px;
+.top-header__right img {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
-.ss_header_social img {
-  height: 32px;
-  filter: grayscale(100%);
-  opacity: 0.8;
-  transition: .25s;
-}
-
-.ss_header_social a:hover img {
-  filter: none;
-  opacity: 1;
-}
-
-/* DIVIDER */
-.ss_header_divider {
+/* divider */
+.top-header__divider {
   width: 1px;
   height: 22px;
-  background: #ccc;
+  background: #d7d7d7;
+  margin: 0 6px;
 }
 
-/* LOGIN */
-.ss_header_login {
+/* login */
+.top-header__login {
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: #555;
+  gap: 6px;
+  font-size: 14px;
+  color: #8f8f8f;
   text-decoration: none;
 }
 
-.ss_header_login img {
-  height: 22px;
+/* иконки — Ч/Б по умолчанию */
+.top-header__right img {
+  filter: grayscale(100%) brightness(1);
+  transition: filter 0.2s ease;
 }
 
-/* ===== ADAPTIVE ===== */
-@media (max-width: 900px) {
-  .ss_header_container {
-    grid-template-columns: 1fr;
-    row-gap: 20px;
-    height: auto;
-    padding: 24px 20px;
-    justify-items: center;
-    text-align: center;
-  }
-
-  .ss_header_right {
-    justify-content: center;
-  }
-
-  .ss_header_divider {
-    display: none;
-  }
+/* цвет при наведении */
+.top-header__right a:hover img {
+  filter: none;
 }
-
-
-
 
 
 
@@ -1602,17 +1558,17 @@ section {
 .page-header {
     background: #ffffff;
 
-    /* 🔥 БЫЛО СИЛЬНО БОЛЬШЕ — УМЕНЬШАЕМ В 2 РАЗА */
+    
     padding-top: 32px;
     padding-bottom: 30px;
 }
 
-/* ✅ общий контейнер */
+
 .page-header .container {
     max-width: 1200px;
 }
 
-/* ✅ никаких внутренних отступов */
+
 .page-header__inner {
     display: flex;
     align-items: center;
@@ -1621,7 +1577,7 @@ section {
     margin: 0;
 }
 
-/* ===== ЛЕВАЯ ЧАСТЬ ===== */
+
 
 .page-header__title {
     font-size: 34px;
@@ -1637,7 +1593,7 @@ section {
     margin: 0;
 }
 
-/* ===== ПРАВАЯ ЧАСТЬ ===== */
+
 
 .page-header__actions {
     display: flex;
@@ -1668,12 +1624,12 @@ section {
     opacity: 1;
 }
 
-/* ================= MOBILE ================= */
+
 
 @media (max-width: 768px) {
 
     .page-header {
-        /* ✅ на мобиле ещё компактнее */
+      
         padding-top: 22px;
         padding-bottom: 20px;
     }
@@ -1759,3 +1715,8 @@ section {
 .whyus-bottom__links a:hover {
     opacity: .65;
 }
+
+
+
+
+
